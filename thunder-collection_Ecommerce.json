@@ -1,0 +1,70 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Ecommerce",
+    "dateExported": "2023-03-12T14:57:05.856Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "51815505-7a0c-429d-ba04-2ffc6601d57b",
+            "name": "Productos",
+            "containerId": "",
+            "created": "2023-02-28T15:59:28.310Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "3c468204-7f59-460e-bffa-a43e2a9e9d54",
+            "colId": "0a703be2-986d-4a99-849d-0e93ac8e2ee4",
+            "containerId": "51815505-7a0c-429d-ba04-2ffc6601d57b",
+            "name": "Crear Producto",
+            "url": "http://localhost:8080/productos/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-03-01T17:43:49.720Z",
+            "modified": "2023-03-12T14:56:09.279Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Prubea\",\n  \"thumbnail\":\"https://images.rappi.com.ar/products/407568584688_lozsyxppteem_125601781661_juodlscdebdc_21182_1.png?d=128x128&e=webp&q=70\",\n  \"precio\":  993,\n  \"descripcion\":\"Rico helado pasteurizado, para los amantes de los sabores acaramelados, en este caluroso verano consiéntete con este cremoso y delicioso. Cada uno de 53 g.\",\n  \"categoria\":\"Helados\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "25e8d829-280b-411f-b8ce-af1c7f7ffac6",
+            "colId": "0a703be2-986d-4a99-849d-0e93ac8e2ee4",
+            "containerId": "51815505-7a0c-429d-ba04-2ffc6601d57b",
+            "name": "PUT Producto",
+            "url": "http://localhost:8080/productos/13",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-03-01T18:18:59.742Z",
+            "modified": "2023-03-12T14:56:23.335Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"editado\",\n  \"thumbnail\":\"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/125/346/products/eco-de-los-andes-sg-1500-l1-0cf017b27c828c039816021634251735-640-0.jpg\",\n  \"precio\": 200,\n  \"descripcion\":\"De agua\",\n  \"categoria\":\"prueba\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2b7a8901-02cc-4659-9885-bc854ad7c444",
+            "colId": "0a703be2-986d-4a99-849d-0e93ac8e2ee4",
+            "containerId": "51815505-7a0c-429d-ba04-2ffc6601d57b",
+            "name": "Producto",
+            "url": "http://localhost:8080/productos/l",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2023-03-01T18:19:40.784Z",
+            "modified": "2023-03-12T14:56:48.440Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
+

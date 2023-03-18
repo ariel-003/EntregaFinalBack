@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/color/48/null/duck.png">
+</head>
+<body>
+  <div class="login-box">
+    <form action="/login" method="post">
+      <div class="user-box">
+        <input type="text" name="username"  required><label>Email:</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="password" required><label>Contraseña:</label>
+      </div>
+      <center>
+        <a type="submit" onclick="this.closest('form').submit()">LOG IN<span></span></a>
+      </center>
+    </form>
+  </div>
+  <form action="/register" method="get">
+    <button type="submit" class="boton" ><span class="span">Registro</span></button>
+  </form>
+  <script src="./forms.js"></script> 
+</body>
+</html>

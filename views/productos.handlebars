@@ -1,0 +1,40 @@
+{{#if categorias}}
+<form id="form-filtrar-categoria" class="confirmar-compra">
+  <label> Filtrar por categoria
+    <select id="select-categoria" name="categoria">
+      <option value=" ">--Seleccione una categoría--</option>
+{{#each categorias}}
+      <option value="{{this}}">{{this}}</option>
+{{/each}}
+    </select>
+  </label>
+  <button type="submit" class="boton-carrito">Filtrar</button>
+</form>
+{{/if}}
+<div class="flex-padre">
+{{#if productos}}
+  {{#each productos}}
+  <div class="producto">
+    <div class="imagen-box">
+      <img src= {{this.thumbnail}} alt="Imagen del producto">
+    </div>
+    <form class="productos-form" target="iframe-carrito" action="/carrito/miCarrito" method="post">
+      <input type="hidden" name="idBack" value="{{this.idBack}}">
+      <div class="nombre"><h3>{{this.nombre}}</h3></div>
+      <div class="descripcion"><p>{{this.descripcion}}</p>
+      <p>Precio: ${{this.precio}}</p>
+      <p>Categoria: {{this.categoria}}</p></div>
+      <div class="submit-box"><input type="number" name="cantidad" value="1" min="1">
+      <button type="submit" class="boton-carrito">Agregar al carrito</button></div>
+    </form>
+    <iframe name="iframe-carrito" style="display:none;"></iframe>
+  </div>
+
+  {{/each}}
+  </div>
+  <script src="../forms.js"></script> 
+  {{else}}
+  <form class="productos-form" action="/productos/prueba" method="post">
+    <button type="submit" class="boton-carrito" >Cargar Productos de prueba</button>
+  </form>
+{{/if}}

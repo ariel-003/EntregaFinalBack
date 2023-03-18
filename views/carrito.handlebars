@@ -1,0 +1,35 @@
+{{#if productos}}
+<div class="flex-padre">
+  {{#each productos}}
+  <div class="producto">
+    <div class="imagen-box">
+      <img src= {{this.thumbnail}} alt="Imagen del producto">
+    </div>
+    <form class="productos-form" id="formulario-{{@index}}" action="/carrito/sacarDelCarrito" method="post">
+      <input type="hidden" name="idBack" value="{{this.idBack}}">
+      <div class="nombre"><h3>{{this.nombre}}</h3></div>
+      <div class="descripcion"><p>{{this.descripcion}}</p>
+      <p>Precio: ${{this.precio}}</p>
+      <p>Categoria: {{this.categoria}}</p>
+			<p>Cantidad: {{this.cantidad}}</p></div>
+      <div class="submit-box"><input type="number" name="cantidad" value="1" min="1" max={{this.cantidad}}>
+      <button type="submit" class="boton-carrito">Remover del carrito</button></div>
+    </form>
+    <iframe name="iframe-carrito" style="display:none;"></iframe>
+  </div>
+  {{/each}}
+  </div>
+  <div class="carrito-checkout">
+    <form action="/carrito" method="post" class="confirmar-compra">
+      <label for="direccion">Dirección de entrega:
+          <input type="text" name="direccion" id="direccion" name="direccion" placeholder="Av. Siempreviva 742"  required>
+        </label>
+      <button type="submit" class="boton-carrito">Comprar</button>
+    </form>
+    <form action="/carrito/eliminarCarrito" method="post">
+      <button type="submit" class="eliminar-carrito">Eliminar carrito</button>
+    </form>
+  </div>
+{{else}}
+  <h1>Todavia no hay productos</h1>
+{{/if}}
